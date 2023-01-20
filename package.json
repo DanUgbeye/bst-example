@@ -1,0 +1,13 @@
+{
+  "name": "CSC382-TREE-DS",
+  "version": "1.0.0",
+  "description": "",  
+  "author": "Daniel Ugbeye",
+  "license": "MIT",
+
+  "main": "public/index.html",
+  "scripts": {
+    "build": "npx tailwind -o ./public/index.css --build",
+    "watch": "tailwindcss -o ./public/index.css --watch"
+  }
+}
