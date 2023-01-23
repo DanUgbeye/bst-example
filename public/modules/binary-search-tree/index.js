@@ -6,23 +6,24 @@ class BinaryTree {
   insert(data) {
     if (this.root === null) {
       this.root = new BinaryNode(data);
+      return true;
     } else {
       function searchTree(node, data) {
         if (data < node.data) {
           if (node.left === null) {
             node.left = new BinaryNode(data);
-            return;
+            return true;
           } else if (node.left !== null) {
             return searchTree(node.left, data);
           }
         } else if (data > node.data) {
           if (node.right === null) {
             node.right = new BinaryNode(data);
-            return;
+            return true;
           } else if (node.right !== null) {
             return searchTree(node.right, data);
           }
-        } else return null;
+        } else return false;
       }
 
       return searchTree(this.root, data);

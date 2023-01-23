@@ -18,9 +18,14 @@ export default function initListeners() {
       return;
     }
     //TODO add item to tree
-    BST.insert(addForm.value.get());
-    successModal.message = "Item added successfully";
-    successModal.open.set(true);
+    const added = BST.insert(addForm.value.get());
+    if (added) {
+      successModal.message = `Element ${addForm.value.get()} added`;
+      successModal.open.set(true);
+    } else {
+      errorModal.message = `Failed to add ${addForm.value.get()}`;
+      errorModal.open.set(true);
+    }
 
     // reset values
     const inputElement = window.document.getElementById("add-item-input");
