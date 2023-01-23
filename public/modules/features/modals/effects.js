@@ -11,12 +11,10 @@ export default function initEffects() {
       backdropElement.classList.add("grid");
 
       successModalElement.classList.remove("hidden");
-      successModalElement.classList.add("grid");
     } else {
       backdropElement.classList.remove("grid");
       backdropElement.classList.add("hidden");
 
-      successModalElement.classList.remove("grid");
       successModalElement.classList.add("hidden");
     }
   });
@@ -31,12 +29,10 @@ export default function initEffects() {
       backdropElement.classList.add("grid");
 
       errorModalElement.classList.remove("hidden");
-      errorModalElement.classList.add("grid");
     } else {
       backdropElement.classList.remove("grid");
       backdropElement.classList.add("hidden");
 
-      errorModalElement.classList.remove("grid");
       errorModalElement.classList.add("hidden");
     }
   });
@@ -51,12 +47,10 @@ export default function initEffects() {
       backdropElement.classList.add("grid");
 
       treeModalElement.classList.remove("hidden");
-      treeModalElement.classList.add("grid");
     } else {
       backdropElement.classList.remove("grid");
       backdropElement.classList.add("hidden");
 
-      treeModalElement.classList.remove("grid");
       treeModalElement.classList.add("hidden");
     }
   });
