@@ -112,62 +112,91 @@
           <!-- SUCCESS MODAL -->
           <div
             id="success-modal"
-            class="p-6 text-center bg-green-100 text-green-600 text-2xl font-semibold hidden place-items-center rounded-xl relative w-[15rem] aspect-video outline-2 outline-green-600 outline"
+            class="p-4 bg-green-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video font-medium hidden"
           >
-            <!-- CLOSE BUTTON -->
-            <button
-              id="close-success-modal"
-              class="w-10 aspect-square text-4xl grid place-items-center overflow-hidden text-gray-800 absolute right-2 top-2 outline-0 rounded-xl"
+            <div
+              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 text-2xl relative outline-2 outline-green-500 outline items-center justify-center"
             >
-              ×
-            </button>
-            <span id="success-modal-message" class="  ">Item Added</span>
+              <div
+                id="success-modal-message"
+                class="h-[70%] flex justify-center items-center"
+              >
+                Item Added
+              </div>
+
+              <!-- CLOSE BUTTON -->
+              <button
+                id="close-success-modal"
+                class="w-[10rem] max-w-[10rem] h-12 grid place-items-center overflow-hidden hover:bg-green-500 hover:text-white outline-green-500 outline-1 outline rounded-full transition-all duration-300"
+              >
+                close
+              </button>
+            </div>
           </div>
 
           <!-- ERROR MODAL -->
           <div
             id="error-modal"
-            class="p-6 text-center bg-red-50 text-red-500 text-2xl font-semibold hidden place-items-center rounded-xl relative max-w-[20rem] w-[90%] aspect-video outline-2 outline-red-500 outline"
+            class="p-4 bg-red-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video font-medium hidden"
           >
-            <!-- CLOSE BUTTON -->
-            <button
-              id="close-error-modal"
-              class="w-10 aspect-square text-4xl grid place-items-center overflow-hidden text-gray-800 absolute right-2 top-2 outline-0 rounded-xl"
+            <div
+              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 text-2xl relative outline-2 outline-red-500 outline items-center justify-center"
             >
-              ×
-            </button>
-            <span id="error-modal-message" class="  "
-              >Something went wrong</span
-            >
+              <div
+                id="error-modal-message"
+                class="h-[70%] flex justify-center items-center"
+              >
+                Something went wrong
+              </div>
+
+              <!-- CLOSE BUTTON -->
+              <button
+                id="close-error-modal"
+                class="w-[10rem] max-w-[10rem] h-12 grid place-items-center overflow-hidden hover:bg-red-500 hover:text-white outline-red-500 outline-1 outline rounded-full transition-all duration-300"
+              >
+                close
+              </button>
+            </div>
           </div>
 
           <!-- TREE MODAL -->
           <div
             id="tree-modal"
-            class="px-6 py-10 hidden flex-col bg-blue-50 text-blue-500 text-2xl font-semibold rounded-xl relative max-w-[30rem] w-[90%] aspect-video outline-2 outline-blue-500 outline"
+            class="p-4 bg-blue-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video font-medium hidden"
           >
-            <!-- CLOSE BUTTON -->
-            <button
-              id="close-tree-modal"
-              class="w-10 aspect-square text-4xl grid place-items-center overflow-hidden text-gray-800 absolute right-4 top-2 outline-0 rounded-xl"
-            >
-              ×
-            </button>
-
-            <h4 class="flex justify-self-start items-center justify-center">
-              <span class="uppercase">Binary Tree</span>
-              <span class="mx-2">|</span>
-              <span id="tree-method" class="text-sm pt-1"
-                >Preorder Traversal</span
-              >
-            </h4>
-
             <div
-              class="self-center flex h-full max-h-[10rem] items-center justify-center gap-x-3"
+              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 text-2xl relative outline-2 outline-blue-500 outline items-center justify-center"
             >
-              <span class="  ">[</span>
-              <span id="tree-list" class="text-justify">1, 2, 3 </span>
-              <span class="  ">]</span>
+              <div class="h-[70%] flex justify-center items-center flex-col">
+                <h4
+                  class="flex justify-self-start items-center text-blue-500 justify-center"
+                >
+                  <span class="uppercase">Binary Tree</span>
+                  <span class="mx-2">|</span>
+                  <span id="tree-method" class="text-sm pt-1"
+                    >Preorder Traversal</span
+                  >
+                </h4>
+
+                <div
+                  class="self-center flex h-full max-h-[10rem] items-center justify-center gap-x-3"
+                >
+                  <span class="text-4xl font-medium text-blue-500">[</span>
+                  <span id="tree-list" class="text-justify"
+                    >1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2,
+                    3
+                  </span>
+                  <span class="text-4xl font-medium text-blue-500">]</span>
+                </div>
+              </div>
+
+              <!-- CLOSE BUTTON -->
+              <button
+                id="close-tree-modal"
+                class="w-[10rem] max-w-[10rem] h-12 grid place-items-center overflow-hidden hover:bg-blue-500 hover:text-white outline-blue-500 outline-1 outline rounded-full transition-all duration-300"
+              >
+                close
+              </button>
             </div>
           </div>
         </div>
