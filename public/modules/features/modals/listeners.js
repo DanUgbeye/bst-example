@@ -11,7 +11,7 @@ export default function initListeners() {
     });
   });
 
-    // closing error modal when open
+  // closing error modal when open
   [
     window.document.getElementById("close-error-modal"),
     window.document.getElementById("modal-backdrop"),
@@ -21,7 +21,7 @@ export default function initListeners() {
     });
   });
 
-    // closing tree modal when open
+  // closing tree modal when open
   [
     window.document.getElementById("close-tree-modal"),
     window.document.getElementById("modal-backdrop"),
@@ -38,5 +38,21 @@ export default function initListeners() {
     window.document.getElementById("tree-modal"),
   ].forEach((element) => {
     element.addEventListener("click", (e) => e.stopPropagation());
+  });
+
+  // close open modals using enter keypress
+  window.document.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      if (
+        successModal.open.get() ||
+        errorModal.open.get() ||
+        treeModal.open.get()
+      ) {
+        successModal.open.get() && successModal.open.set(false);
+        errorModal.open.get() && errorModal.open.set(false);
+        treeModal.open.get() && treeModal.open.set(false);
+        e.preventDefault();
+      }
+    }
   });
 }
