@@ -23,7 +23,7 @@ export default function initListeners() {
       successModal.message = `element ${deleteForm.value.get()} deleted`;
       successModal.open.set(true);
     } else {
-      errorModal.message = "element not found";
+      errorModal.message = `element ${deleteForm.value.get()} not found`;
       errorModal.open.set(true);
     }
 
