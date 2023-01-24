@@ -23,7 +23,7 @@ export default function initListeners() {
       successModal.message = `element ${element.data} found`;
       successModal.open.set(true);
     } else {
-      errorModal.message = `element ${element.data} not found`;
+      errorModal.message = `element ${searchForm.value.get()} not found`;
       errorModal.open.set(true);
     }
 
