@@ -149,7 +149,7 @@ class BinaryTree {
 
   inOrder() {
     if (this.root == null) {
-      return null;
+      return [];
     } else {
       let result = new Array();
       function traverseInOrder(node) {
@@ -164,7 +164,7 @@ class BinaryTree {
 
   preOrder() {
     if (this.root == null) {
-      return null;
+      return [];
     } else {
       let result = new Array();
       function traversePreOrder(node) {
@@ -179,7 +179,7 @@ class BinaryTree {
 
   postOrder() {
     if (this.root == null) {
-      return null;
+      return [];
     } else {
       let result = new Array();
       function traversePostOrder(node) {
@@ -209,7 +209,7 @@ class BinaryTree {
       }
       return result;
     } else {
-      return null;
+      return [];
     }
   }
 }
