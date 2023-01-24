@@ -23,8 +23,13 @@ export default function initListeners() {
       successModal.message = `Element ${addForm.value.get()} added`;
       successModal.open.set(true);
     } else {
-      errorModal.message = `Failed to add ${addForm.value.get()}`;
+      if(added === false) {
+        errorModal.message = `Element ${addForm.value.get()} already exists`;
       errorModal.open.set(true);
+      } else {
+        errorModal.message = `Failed to add ${addForm.value.get()}`;
+        errorModal.open.set(true);
+      }
     }
 
     // reset values
