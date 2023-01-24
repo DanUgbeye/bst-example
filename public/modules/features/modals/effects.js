@@ -75,8 +75,7 @@ export default function initEffects() {
         "opacity-0"
       );
       backdropElement.classList.add("grid", "opacity-100");
-      backdropElement.focus();
-
+      
       treeModalElement.classList.remove("scale-0");
       treeModalElement.classList.add("-translate-y-[50%]", "scale-100");
     } else {
