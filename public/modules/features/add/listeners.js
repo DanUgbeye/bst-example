@@ -9,18 +9,29 @@ export default function initListeners() {
   getInput("add-item-input", (value) => {
     addForm.error.get() && addForm.error.set("");
     addForm.value.set(value);
+    const validation = validateInput(addForm.value.get());
+    if (!validation.valid) {
+      addForm.error.set(validation.message);
+    }
   });
 
+  window.document.getElementById("add-item-input").addEventListener("blur", () => {
+    !addForm.value.get() && addForm.error.get() && addForm.error.set("");
+  })
+
   onFormSubmit("add-item-form", () => {
-    const isValid = validateInput(addForm.value.get());
-    if (!isValid) {
-      addForm.error.set("cannot add empty item");
-      return;
+    const validation = validateInput(addForm.value.get());
+    if (!validation.valid) {
+      return addForm.error.set(validation.message);
     }
 
-    const added = BST.insert(addForm.value.get());
+    const added = BST.insert(Number(addForm.value.get()));
     if (added) {
       Modal.success(`Element ${addForm.value.get()} added`);
+      // reset values
+      const inputElement = window.document.getElementById("add-item-input");
+      inputElement.value = "";
+      addForm.value.set("");
     } else {
       if (added === false) {
         Modal.error(`Element ${addForm.value.get()} already exists`);
@@ -28,10 +39,5 @@ export default function initListeners() {
         Modal.error(`Failed to add ${addForm.value.get()}`);
       }
     }
-
-    // reset values
-    const inputElement = window.document.getElementById("add-item-input");
-    inputElement.value = "";
-    addForm.value.set("");
   });
 }

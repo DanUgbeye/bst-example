@@ -9,25 +9,32 @@ export default function initListeners() {
   getInput("search-item-input", (value) => {
     searchForm.error.get() && searchForm.error.set("");
     searchForm.value.set(value);
+    const validation = validateInput(searchForm.value.get());
+    if (!validation.valid) {
+      searchForm.error.set(validation.message);
+    }
   });
 
+  window.document.getElementById("search-item-input").addEventListener("blur", () => {
+    !searchForm.value.get() && searchForm.error.get() && searchForm.error.set("");
+  })
+
   onFormSubmit("search-item-form", () => {
-    const isValid = validateInput(searchForm.value.get());
-    if (!isValid) {
-      searchForm.error.set("cannot search empty item");
-      return;
+    const validation = validateInput(searchForm.value.get());
+    if (!validation.valid) {
+      return searchForm.error.set(validation.message);
     }
 
-    const element = BST.find(searchForm.value.get());
+    const element = BST.find(Number(searchForm.value.get()));
     if (element) {
       Modal.success(`element ${element.data} found`);
+      // reset values
+      const inputElement = window.document.getElementById("search-item-input");
+      inputElement.value = "";
+      searchForm.value.set("");
     } else {
       Modal.error(`element ${searchForm.value.get()} not found`);
     }
 
-    // reset values
-    const inputElement = window.document.getElementById("search-item-input");
-    inputElement.value = "";
-    searchForm.value.set("");
   });
 }
