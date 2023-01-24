@@ -23,7 +23,9 @@ class BinaryTree {
           } else if (node.right !== null) {
             return searchTree(node.right, data);
           }
-        } else return false;
+        }  else if (data === node.data) {
+          return false;
+        } else return null;
       }
 
       return searchTree(this.root, data);
