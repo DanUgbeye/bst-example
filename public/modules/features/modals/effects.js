@@ -9,14 +9,22 @@ export default function initEffects() {
     );
     if (state) {
       successMessageElement.innerHTML = successModal.message;
-      backdropElement.classList.remove("invisible", "pointer-events-none", "opacity-0");
+      backdropElement.classList.remove(
+        "invisible",
+        "pointer-events-none",
+        "opacity-0"
+      );
       backdropElement.classList.add("grid", "opacity-100");
 
       successModalElement.classList.remove("scale-0");
       successModalElement.classList.add("-translate-y-[50%]", "scale-100");
-   } else {
+    } else {
       backdropElement.classList.remove("grid", "opacity-100");
-      backdropElement.classList.add("invisible", "pointer-events-none", "opacity-0");
+      backdropElement.classList.add(
+        "invisible",
+        "pointer-events-none",
+        "opacity-0"
+      );
 
       successModalElement.classList.remove("-translate-y-[50%]", "scale-100");
       successModalElement.classList.add("scale-0");
@@ -31,14 +39,22 @@ export default function initEffects() {
     );
     if (state) {
       errorMessageElement.innerHTML = errorModal.message;
-      backdropElement.classList.remove("invisible", "pointer-events-none", "opacity-0");
+      backdropElement.classList.remove(
+        "invisible",
+        "pointer-events-none",
+        "opacity-0"
+      );
       backdropElement.classList.add("grid", "opacity-100");
 
       errorModalElement.classList.remove("scale-0");
       errorModalElement.classList.add("-translate-y-[50%]", "scale-100");
     } else {
       backdropElement.classList.remove("grid", "opacity-100");
-      backdropElement.classList.add("invisible", "pointer-events-none", "opacity-0");
+      backdropElement.classList.add(
+        "invisible",
+        "pointer-events-none",
+        "opacity-0"
+      );
 
       errorModalElement.classList.remove("-translate-y-[50%]", "scale-100");
       errorModalElement.classList.add("scale-0");
@@ -53,14 +69,23 @@ export default function initEffects() {
     if (state) {
       treeMethodElement.innerHTML = treeModal.method.get();
       treeListElement.innerHTML = treeModal.data.join(", ");
-      backdropElement.classList.remove("invisible", "pointer-events-none", "opacity-0");
+      backdropElement.classList.remove(
+        "invisible",
+        "pointer-events-none",
+        "opacity-0"
+      );
       backdropElement.classList.add("grid", "opacity-100");
+      backdropElement.focus();
 
       treeModalElement.classList.remove("scale-0");
       treeModalElement.classList.add("-translate-y-[50%]", "scale-100");
     } else {
       backdropElement.classList.remove("grid", "opacity-100");
-      backdropElement.classList.add("invisible", "pointer-events-none", "opacity-0");
+      backdropElement.classList.add(
+        "invisible",
+        "pointer-events-none",
+        "opacity-0"
+      );
 
       treeModalElement.classList.remove("-translate-y-[50%]", "scale-100");
       treeModalElement.classList.add("scale-0");

@@ -3,7 +3,7 @@ import getInput from "../../utils/getInput.util.js";
 import onFormSubmit from "../../utils/onFormSubmit.util.js";
 import validateInput from "../../utils/validateInput.util.js";
 import BST from "../../data/tree.data.js";
-import { successModal, errorModal } from "../modals/data.js";
+import { Modal } from "../modals/index.js";
 
 export default function initListeners() {
   getInput("delete-item-input", (value) => {
@@ -20,11 +20,9 @@ export default function initListeners() {
 
     const deleted = BST.delete(deleteForm.value.get());
     if (deleted) {
-      successModal.message = `element ${deleteForm.value.get()} deleted`;
-      successModal.open.set(true);
+      Modal.success(`element ${deleteForm.value.get()} deleted`);
     } else {
-      errorModal.message = `element ${deleteForm.value.get()} not found`;
-      errorModal.open.set(true);
+      Modal.error(`element ${deleteForm.value.get()} not found`);
     }
 
     // reset values
