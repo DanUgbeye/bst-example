@@ -16,90 +16,92 @@
 
     <main class="p-12">
       <!-- FORMS -->
-      <section class="grid place-items-center gap-y-10 mb-12">
-        <!-- ADD NEW ITEM FORM -->
-        <form
-          id="add-item-form"
-          action=""
-          class="flex flex-col xsm:flex-row mx-auto gap-y-3 gap-x-6 justify-center w-full"
-        >
-          <fieldset class="flex flex-col max-w-lg w-full">
-            <input
-              type="text"
-              name="add-item"
-              id="add-item-input"
-              class="h-12 w-full max-w-lg rounded-lg border border-gray-400 focus:border-blue-600 focus-border-2 outline-0 text-blue-600 px-2"
-            />
-
-            <div
-              id="add-item-error"
-              class="text-red-600 text-sm pl-2 opacity-0 transition-all duration-200"
-            >
-              error message
-            </div>
-          </fieldset>
-          <button
-            class="h-12 max-w-[10rem] w-full min-w-[10rem] text-lg bg-green-600 hover:bg-green-700 rounded-lg py-1 transition-all duration-300"
+      <section class="grid place-items-center mb-12">
+        <div class="max-w-xl w-full mx-auto gap-y-4 flex flex-col">
+          <!-- ADD NEW ITEM FORM -->
+          <form
+            id="add-item-form"
+            action=""
+            class="flex flex-col xsm:flex-row gap-y-3 gap-x-6 justify-center w-full"
           >
-            Add New Item
-          </button>
-        </form>
+            <fieldset class="flex flex-col w-full">
+              <input
+                type="text"
+                name="add-item"
+                id="add-item-input"
+                class="h-12 w-full rounded-lg border border-gray-400 focus:border-blue-600 focus-border-2 outline-0 text-blue-600 px-2"
+              />
 
-        <!-- SEARCH ITEM FORM -->
-        <form
-          id="search-item-form"
-          action=""
-          class="flex flex-col xsm:flex-row mx-auto gap-y-3 gap-x-6 justify-center w-full"
-        >
-          <fieldset class="flex flex-col max-w-lg w-full">
-            <input
-              type="text"
-              name="search-item"
-              id="search-item-input"
-              class="h-12 w-full max-w-lg rounded-lg border border-gray-400 focus:border-blue-600 focus-border-2 outline-0 text-blue-600 px-2"
-            />
-
-            <div
-              id="search-item-error"
-              class="text-red-600 text-sm pl-2 opacity-0 transition-all duration-200"
+              <div
+                id="add-item-error"
+                class="text-red-600 text-sm pl-2 opacity-0 transition-all duration-200"
+              >
+                error message
+              </div>
+            </fieldset>
+            <button
+              class="h-12 max-w-[10rem] w-full min-w-[10rem] text-lg bg-green-600 hover:bg-green-700 rounded-lg py-1 transition-all duration-300"
             >
-              error message
-            </div>
-          </fieldset>
-          <button
-            class="h-12 max-w-[10rem] w-full min-w-[10rem] text-lg bg-blue-600 hover:bg-blue-700 rounded-lg py-1 transition-all duration-300"
+              Add New Item
+            </button>
+          </form>
+
+          <!-- SEARCH ITEM FORM -->
+          <form
+            id="search-item-form"
+            action=""
+            class="flex flex-col xsm:flex-row gap-y-3 gap-x-6 justify-center w-full"
           >
-            Search Item
-          </button>
-        </form>
+            <fieldset class="flex flex-col w-full">
+              <input
+                type="text"
+                name="search-item"
+                id="search-item-input"
+                class="h-12 w-full rounded-lg border border-gray-400 focus:border-blue-600 focus-border-2 outline-0 text-blue-600 px-2"
+              />
 
-        <!-- DELETE ITEM FORM -->
-        <form
-          id="delete-item-form"
-          action=""
-          class="flex flex-col xsm:flex-row mx-auto gap-y-3 gap-x-6 justify-center w-full"
-        >
-          <fieldset class="flex flex-col max-w-lg w-full">
-            <input
-              type="text"
-              name="delete-item"
-              id="delete-item-input"
-              class="h-12 w-full max-w-lg rounded-lg border border-gray-400 focus:border-blue-600 focus-border-2 outline-0 text-blue-600 px-2"
-            />
-
-            <div
-              id="delete-item-error"
-              class="text-red-600 text-sm pl-2 opacity-0 transition-all duration-200"
+              <div
+                id="search-item-error"
+                class="text-red-600 text-sm pl-2 opacity-0 transition-all duration-200"
+              >
+                error message
+              </div>
+            </fieldset>
+            <button
+              class="h-12 max-w-[10rem] w-full min-w-[10rem] text-lg bg-blue-600 hover:bg-blue-700 rounded-lg py-1 transition-all duration-300"
             >
-              error message
-            </div>
-          </fieldset>
-          <button
-            class="h-12 max-w-[10rem] w-full min-w-[10rem] text-lg bg-red-600 hover:bg-red-700 rounded-lg py-1 transition-all duration-300"
+              Search Item
+            </button>
+          </form>
+
+          <!-- DELETE ITEM FORM -->
+          <form
+            id="delete-item-form"
+            action=""
+            class="flex flex-col xsm:flex-row gap-y-3 gap-x-6 justify-center w-full"
           >
-            Delete Item
-          </button>
-        </form>
+            <fieldset class="flex flex-col w-full">
+              <input
+                type="text"
+                name="delete-item"
+                id="delete-item-input"
+                class="h-12 w-full rounded-lg border border-gray-400 focus:border-blue-600 focus-border-2 outline-0 text-blue-600 px-2"
+              />
+
+              <div
+                id="delete-item-error"
+                class="text-red-600 text-sm pl-2 opacity-0 transition-all duration-200"
+              >
+                error message
+              </div>
+            </fieldset>
+            <button
+              class="h-12 max-w-[10rem] w-full min-w-[10rem] text-lg bg-red-600 hover:bg-red-700 rounded-lg py-1 transition-all duration-300"
+            >
+              Delete Item
+            </button>
+          </form>
+        </div>
       </section>
 
       <!-- MODALS -->
@@ -107,19 +109,19 @@
         <!-- MODAL BACKDROP -->
         <div
           id="modal-backdrop"
-          class="inset-0 fixed place-items-center bg-black/70 hidden"
+          class="inset-0 fixed place-items-center bg-black/70 invisible pointer-events-none opacity-0 transition-all duration-300"
         >
           <!-- SUCCESS MODAL -->
           <div
             id="success-modal"
-            class="p-4 bg-green-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video font-medium hidden"
+            class="p-4 bg-green-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video text-lg fixed top-[50%] bottom-[50%] -translate-y-[50%] scale-0 right-[50%] left-[50%] z-20 -translate-x-[50%] overflow-hidden transition-all duration-300"
           >
             <div
-              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 text-2xl relative outline-2 outline-green-500 outline items-center justify-center"
+              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 relative outline-2 outline-green-500 outline items-center justify-center"
             >
               <div
                 id="success-modal-message"
-                class="h-[70%] flex justify-center items-center"
+                class="h-[70%] flex justify-center items-center font-medium text-xl"
               >
                 Item Added
               </div>
@@ -127,7 +129,7 @@
               <!-- CLOSE BUTTON -->
               <button
                 id="close-success-modal"
-                class="w-[7rem] max-w-[7rem] h-12 grid place-items-center overflow-hidden hover:bg-green-500 hover:text-white outline-green-500 text-lg outline-1 outline rounded-full transition-all duration-300"
+                class="w-[7rem] max-w-[7rem] h-12 grid place-items-center overflow-hidden hover:bg-green-500 hover:text-white outline-green-500 text-lg outline-1 outline rounded-full transition-all duration-300 tracking-widest"
               >
                 close
               </button>
@@ -137,14 +139,14 @@
           <!-- ERROR MODAL -->
           <div
             id="error-modal"
-            class="p-4 bg-red-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video font-medium hidden"
+            class="p-4 bg-red-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video text-lg fixed top-[50%] bottom-[50%] -translate-y-[50%] scale-0 right-[50%] left-[50%] z-20 -translate-x-[50%] overflow-hidden transition-all duration-300"
           >
             <div
-              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 text-2xl relative outline-2 outline-red-500 outline items-center justify-center"
+              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 relative outline-2 outline-red-500 outline items-center justify-center"
             >
               <div
                 id="error-modal-message"
-                class="h-[70%] flex justify-center items-center"
+                class="h-[70%] flex justify-center items-center font-medium text-xl"
               >
                 Something went wrong
               </div>
@@ -152,7 +154,7 @@
               <!-- CLOSE BUTTON -->
               <button
                 id="close-error-modal"
-                class="w-[7rem] max-w-[7rem] h-12 grid place-items-center overflow-hidden hover:bg-red-500 hover:text-white outline-red-500 text-lg outline-1 outline rounded-full transition-all duration-300"
+                class="w-[7rem] max-w-[7rem] h-12 grid place-items-center overflow-hidden hover:bg-red-500 hover:text-white outline-red-500 text-lg outline-1 outline rounded-full transition-all duration-300 tracking-widest"
               >
                 close
               </button>
@@ -162,38 +164,36 @@
           <!-- TREE MODAL -->
           <div
             id="tree-modal"
-            class="p-4 bg-blue-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video font-medium hidden"
+            class="p-4 bg-blue-50 rounded-3xl w-[80%] max-w-[30rem] aspect-video text-lg fixed top-[50%] bottom-[50%] -translate-y-[50%] scale-0 right-[50%] left-[50%] z-20 -translate-x-[50%] overflow-hidden transition-all duration-300"
           >
             <div
-              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 text-2xl relative outline-2 outline-blue-500 outline items-center justify-center"
+              class="px-7 py-2 flex flex-col h-full rounded-3xl text-gray-500 relative outline-2 outline-blue-500 outline items-center justify-center"
             >
               <div class="h-[70%] flex justify-center items-center flex-col">
                 <h4
-                  class="flex justify-self-start items-center text-blue-500 justify-center"
+                  class="flex justify-self-start items-center text-blue-500 justify-center text-2xl font-medium"
                 >
                   <span class="uppercase">Binary Tree</span>
                   <span class="mx-2">|</span>
-                  <span id="tree-method" class="text-sm pt-1"
-                    >Preorder Traversal</span
-                  >
+                  <span class="text-sm pt-1">
+                    <span id="tree-method">Preorder</span>
+                    <span>Traversal</span>
+                  </span>
                 </h4>
 
                 <div
                   class="self-center flex h-full max-h-[10rem] items-center justify-center gap-x-3"
                 >
-                  <span class="text-4xl font-medium text-blue-500">[</span>
-                  <span id="tree-list" class="text-justify"
-                    >1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2,
-                    3
-                  </span>
-                  <span class="text-4xl font-medium text-blue-500">]</span>
+                  <span class="text-4xl text-blue-500">[</span>
+                  <span id="tree-list" class="text-justify">1, 2, 3</span>
+                  <span class="text-4xl text-blue-500">]</span>
                 </div>
               </div>
 
               <!-- CLOSE BUTTON -->
               <button
                 id="close-tree-modal"
-                class="w-[7rem] max-w-[7rem] h-12 grid place-items-center overflow-hidden hover:bg-blue-500 hover:text-white outline-blue-500 text-lg outline-1 outline rounded-full transition-all duration-300"
+                class="w-[7rem] max-w-[7rem] h-12 grid place-items-center overflow-hidden hover:bg-blue-500 hover:text-white outline-blue-500 text-lg outline-1 outline rounded-full transition-all duration-300 tracking-widest"
               >
                 close
               </button>
@@ -202,10 +202,10 @@
         </div>
       </section>
 
-      <!-- VIEW TREE BUTTON SECTION -->
+      <!-- VIEW TREE SECTION -->
       <section
         id="view-tree-buttons"
-        class="rounded-xl bg-blue-600 p-8 max-w-xl mx-auto"
+        class="rounded-xl bg-blue-600 p-8 max-w-xl w-full mx-auto"
       >
         <h1 class="font-semibold text-center text-xl my-auto">
           VIEW BINARY TREE
@@ -235,7 +235,7 @@
     </main>
 
     <div class="opacity-0 border-red-600 hidden"></div>
-    <div class="hidden opacity-100"></div>
+    <div class="hidden opacity-100 -translate-y-[50%] "></div>
 
     <script type="module" src="./index.js"></script>
   </body>
