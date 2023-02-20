@@ -1,6 +1,13 @@
-class BinaryTree {
-  constructor() {
+class BinarySearchTree {
+  constructor(initialdata = []) {
     this.root = null;
+    if (initialdata.length <= 0) {
+      return;
+    }
+
+    initialdata.forEach((data) => {
+      this.insert(data);
+    });
   }
 
   insert(data) {
@@ -23,7 +30,7 @@ class BinaryTree {
           } else if (node.right !== null) {
             return searchTree(node.right, data);
           }
-        }  else if (data === node.data) {
+        } else if (data === node.data) {
           return false;
         } else return null;
       }
@@ -233,4 +240,4 @@ class BinaryNode {
   }
 }
 
-export default BinaryTree;
+export default BinarySearchTree;
