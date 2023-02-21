@@ -29,7 +29,7 @@ export default function initListeners() {
       return deleteForm.error.set(validation.message);
     }
 
-    const deleteValue = Number(deleteForm.value.get());
+    const deleteValue = deleteForm.value.get();
     let index = database.indexOf(deleteValue);
     if (index !== -1) {
       // delete from database

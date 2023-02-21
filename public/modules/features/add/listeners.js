@@ -27,7 +27,7 @@ export default function initListeners() {
       return addForm.error.set(validation.message);
     }
 
-    const addValue = Number(addForm.value.get());
+    const addValue = addForm.value.get();
     const exists = database.indexOf(addValue);
     
     if (exists === -1) {

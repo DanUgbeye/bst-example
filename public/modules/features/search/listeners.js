@@ -26,7 +26,7 @@ export default function initListeners() {
       return searchForm.error.set(validation.message);
     }
 
-    const searchValue = Number(searchForm.value.get());
+    const searchValue = searchForm.value.get();
     const BST = new BinarySearchTree(database);
     // search tree
     const found = BST.find(searchValue);    

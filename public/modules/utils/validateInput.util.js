@@ -9,5 +9,9 @@ export default function validateInput(value) {
       valid: false,
       message: "only numbers are allowed",
     };
+  if(value.includes(".")) return {
+    valid: false,
+    message: "no decimal numbers are allowed "
+  }
   return { valid: true, message: "value is valid" };
 }
