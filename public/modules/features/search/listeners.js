@@ -2,7 +2,8 @@ import searchForm from "./data.js";
 import getInput from "../../utils/getInput.util.js";
 import onFormSubmit from "../../utils/onFormSubmit.util.js";
 import validateInput from "../../utils/validateInput.util.js";
-import BST from "../../data/tree.data.js";
+import database from "../../data/database.js";
+import BinarySearchTree from "../../binary-search-tree/index.js";
 import { Modal } from "../modals/index.js";
 
 export default function initListeners() {
@@ -25,15 +26,19 @@ export default function initListeners() {
       return searchForm.error.set(validation.message);
     }
 
-    const element = BST.find(Number(searchForm.value.get()));
-    if (element) {
-      Modal.success(`element ${element.data} found`);
+    const searchValue = searchForm.value.get();
+    const BST = new BinarySearchTree(database);
+    // search tree
+    const found = BST.find(searchValue);    
+
+    if (found) {
+      Modal.success(`element ${searchValue} found`);
       // reset values
       const inputElement = window.document.getElementById("search-item-input");
       inputElement.value = "";
       searchForm.value.set("");
     } else {
-      Modal.error(`element ${searchForm.value.get()} not found`);
+      Modal.error(`element ${searchValue} not found`);
     }
 
   });
